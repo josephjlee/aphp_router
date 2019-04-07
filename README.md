@@ -4,7 +4,7 @@
 ![PHP Support](https://img.shields.io/badge/php%20tested-7.1-brightgreen.svg)
 ![Dependencies](https://img.shields.io/badge/dependencies-none-brightgreen.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
-![Travis](https://api.travis-ci.org/travis-ci/travis-web.svg?branch=master)
+![Travis](https://api.travis-ci.org/GonistLelatel/aphp_router.svg?branch=master)
 
 ## Introduction
 
