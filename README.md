@@ -71,6 +71,26 @@ $router->group('/movies', function() use ($router) {
     });
 });
 ```
+### Cancel routing
+
+In some cases needs to cancel routing, by the application logic.<br>
+Use `$router->cancel()` method to handle this.
+
+```php 
+$router->set404(function() use ($router) {
+	header($_SERVER["SERVER_PROTOCOL"] . " 404 Not Found");
+	echo '404 Not Found';
+});
+$router->get('/movies/(\d+)', function($id) use($router) {
+	if ($id == 5000) {
+		$router->cancel(); // <<
+		return;
+	}
+	echo 'movie id ' . htmlentities($id);
+});
+$router->run();
+```
+If `\movies\5000` then 404 page will show.
 
 ## More features
 For more features:

@@ -30,4 +30,8 @@ class Router extends BaseRouter {
 	public function options($pattern, $fn) {
 		$this->match(['OPTIONS'], $pattern, $fn);
 	}
+
+	public function cancel() {
+		$this->finished = false;
+	}
 }
