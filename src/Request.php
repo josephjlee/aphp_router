@@ -5,7 +5,8 @@ namespace aphp\Router;
 class Request {
 	public $headers = null;
 	public $method = null;
-	public $uri = null;
+    public $uri = null;
+    public $basePath = '';
 	/**
      * Get all request headers.
      *
@@ -94,6 +95,6 @@ class Request {
     {
 		// override if needed
 		// return implode('/', array_slice(explode('/', $_SERVER['SCRIPT_NAME']), 0, -1)) . '/';
-		return '';
+		return $this->basePath;
 	}
 }
